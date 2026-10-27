@@ -1,0 +1,17 @@
+.env
+.*
+!.gitignore
+*.ini
+*node_modules
+*.lck
+*~$*
+
+PCB/MiniQuad0/working_exports
+PCB/MiniQuad0/bom.xlsx
+PCB/MiniQuad0/MiniQuad0-backups
+PCB/MiniQuad0/fp-info-cache
+PCB/MiniQuad0/#auto_saved_files#
+PCB/MiniQuad0/_autosave-MiniQuad0.kicad_sch
+PCB/MiniQuad0/_autosave-MiniQuad0.kicad_pcb
+PCB/MiniQuad0/fabrication-toolkit-options.json
+PCB/MiniQuad0/production
