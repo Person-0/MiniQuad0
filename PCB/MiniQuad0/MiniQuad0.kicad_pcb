@@ -1521,6 +1521,17 @@
 				(xyz -90 0 0)
 			)
 		)
+		(model "${OPLPATH}/3dmodels/XIAO RP2350_.step"
+			(offset
+				(xyz 6.2 -1.6 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -90)
+			)
+		)
 	)
 	(footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 		(layer "F.Cu")
@@ -2829,7 +2840,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J4"
-			(at 1.1484 -2.6052 180)
+			(at 0.1484 -2.6052 180)
 			(layer "F.SilkS")
 			(uuid "f2aeedd2-e948-4200-88f0-9e82db527888")
 			(effects
@@ -3093,7 +3104,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J6"
-			(at 0 -2.38 0)
+			(at 2.75 6 0)
 			(layer "F.SilkS")
 			(uuid "7b920c36-db00-44f0-acc8-acce868e3619")
 			(effects
@@ -3621,7 +3632,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J5"
-			(at -2.7012 6.0036 0)
+			(at -2.75 6 0)
 			(layer "F.SilkS")
 			(uuid "c95be1f5-13a2-4fa2-a8f9-596232fb1213")
 			(effects
@@ -5375,7 +5386,7 @@
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
 		(property "Reference" "J3"
-			(at -1.1612 -2.6308 180)
+			(at -0.1612 -2.6308 180)
 			(layer "F.SilkS")
 			(uuid "72d00ac9-5d2a-4ab4-828b-73fb7d1722f5")
 			(effects
