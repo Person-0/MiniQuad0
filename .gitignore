@@ -5,6 +5,7 @@
 *node_modules
 *.lck
 *~$*
+*.xlsx
 
 PCB/MiniQuad0/working_exports
 PCB/MiniQuad0/bom.xlsx
