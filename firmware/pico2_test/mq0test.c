@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "pico/stdlib.h"
 #include "hardware/uart.h"
 
@@ -18,13 +19,47 @@ int main() {
     uart_set_hw_flow(ELRS_UART, false, false);
     sleep_ms(2000);
 
-    printf("ELRS raw receiver data\n");
-    printf("UART1 | GP4 TX | GP5 RX | 420000 baud\n\n");
+    printf("reading crsf receiver data\n");
 
+    uint8_t dataarr[64];
+    uint8_t dataarrp = 0;
+    uint8_t dlen = 0;
+    bool receiving = false;
     while (true) {
         if (uart_is_readable(ELRS_UART)) {
             uint8_t data = uart_getc(ELRS_UART);
-            printf("%02X \n", data);
+
+            if (!receiving) {
+                if (data == 0xC8) {
+                    receiving = true;
+                    dataarrp = 0;
+                }
+                continue;
+            }
+
+            if (dataarrp == 0) {
+                dlen = data;
+                if (dlen < 2 || dlen > 62) {
+                    receiving = false;
+                    continue;
+                }
+                dataarr[dataarrp++] = data;
+                continue;
+            }
+
+            dataarr[dataarrp++] = data;
+
+            if (dataarrp >= dlen + 1) {
+                receiving = false;
+                if (dataarr[1] == 0x16) {
+                    printf("RC frame detected!\n");
+                    for (uint8_t i = 0; i < dataarrp; i++) {
+                        printf("%02X ", dataarr[i]);
+                    }
+                    printf("\n");
+                }
+            }
+
         }
     }
 }
