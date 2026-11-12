@@ -38,10 +38,16 @@ pico_sdk_init()
 if (TARGET tinyusb_device)
     add_executable(mq0test
             mq0test.c
-            )
+            src/imu.c
+            libs/mp92plus/mp92plus.c
+        )
 
     # pull in common dependencies
-    target_link_libraries(mq0test pico_stdlib hardware_uart)
+    target_link_libraries(mq0test
+            pico_stdlib
+            hardware_uart
+            hardware_spi
+        )
 
     # enable usb output, disable uart output
     pico_enable_stdio_usb(mq0test 1)
