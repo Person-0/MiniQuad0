@@ -1,8 +1,8 @@
 #pragma once
 
 #define FC_TARGET_MCU               RP2350A
-#define BOARD_NAME                  PICO2_2350A
-#define MANUFACTURER_ID             RASP
+#define BOARD_NAME                  MQ0
+#define MANUFACTURER_ID             P0
 
 // led
 #define LED0_PIN                    PA25
