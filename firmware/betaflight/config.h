@@ -23,7 +23,6 @@
 #define SPI0_SDO_PIN                PA3
 #define GYRO_1_ALIGN                CW0_DEG
 
-
 // Example GPIO pins for testing motor output
 #define MOTOR1_PIN                  PA10
 #define MOTOR2_PIN                  PA11
